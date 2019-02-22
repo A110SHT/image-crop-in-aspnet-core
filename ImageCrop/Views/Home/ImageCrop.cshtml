@@ -1,0 +1,41 @@
+﻿@section css{
+<link href="~/css/jquery.Jcrop.min.css" rel="stylesheet" />
+}
+<div class="container">
+    <input type="file" class="img" id="imgInp" name="files" accept="image/*">
+    <div class="col-lg-6">
+        <img src="" class="img img-responsive img-rounded" />
+    </div>
+</div>
+
+<div class="modal" id="myprofilecrop" tabindex="-1" role="dialog" aria-labelledby="cropmodel">
+    <div class="modal-dialog" role="document">
+        <div id="loadingDiv" class="hide">
+            <div>
+                <h7>Please wait...</h7>
+            </div>
+        </div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" arial-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title text-center" id="cropmodel">Update Profile Picture</h4>
+            </div>
+            <form id="formimg">
+                <div id="loader" class="text-center">Loading...</div>
+                <div class="modal-body text-center">
+                    <div id="views" class="m-t-15"></div>
+                </div>
+                <div class="modal-footer">
+                    <button id="cropbutton" class="btn btn-primary" type="submit">Save</button>
+                    <button id="rotatebutton" class="btn btn-default" type="button">Rotate</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script src="~/js/jcrop/jquery.Jcrop.min.js"></script>
+    <script src="~/js/ImageCrop.js"></script>
+}
